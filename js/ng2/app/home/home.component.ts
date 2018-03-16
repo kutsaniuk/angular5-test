@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   tabs: Object[];
+  tabsData: Object;
   editItem: Object[];
 
   constructor() {
@@ -24,6 +25,7 @@ export class HomeComponent implements OnInit {
       },
     ];
     this.editItem = [];
+    this.tabsData = {};
   }
 
   ngOnInit() {
@@ -36,5 +38,10 @@ export class HomeComponent implements OnInit {
     for (let i = 1; i <= 8; i++) {
         data.push(last + i);
     }
+  }
+
+  save = (i: number, j: number) => {
+    this.tabs[i]['data'][j] = this.tabsData[i + '' + j];
+    this.editItem[j] = !1;
   }
 }

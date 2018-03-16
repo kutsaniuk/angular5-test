@@ -10,8 +10,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js', '.scss', '.html']
   },
-  entry: './js/ng2/app/main.jit.ts',
-  //entry: './js/ng2/app/main.aot.ts',
+  entry: './js/ng2/app/main.aot.ts',
   output: {
     path: path.resolve(__dirname, '.build/aot'),
     filename: 'app.main.js'
