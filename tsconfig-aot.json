@@ -16,6 +16,10 @@
     "skipLibCheck": true,
     "rootDir": "."
   },
+  "include":[
+    "js/**/*.ts",
+    "node_modules/@angular/platform-browser/**/*.ts"
+  ],
   "angularCompilerOptions": {
     "genDir": "aot"
   }
